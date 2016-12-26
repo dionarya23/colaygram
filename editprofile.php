@@ -55,7 +55,7 @@ if (!Session::exists('username')){
   if ($error_foto == 0) {
   if ($size_foto < 2000000){
     if ($type_foto == 'image/jpeg' || $type_foto == 'image/jpg' || $type_foto == 'image/png' || $type_foto == 'image/gif'){
-      move_uploaded_file($tmp_foto, 'user/'.$nama_foto);
+      move_uploaded_file($tmp_foto, 'ajax/user/'.$nama_foto);
       $user->update_user(array('foto' => $nama_foto), $id);
       $pesan_flash = '<div class="w3-panel w3-teal"><h5>Selamat</h5><strong>Foto anda Berhasil di Perbarui </strong></div>';
     }else{
